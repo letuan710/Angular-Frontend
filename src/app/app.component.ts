@@ -1,6 +1,7 @@
 import { TokenStorageService } from './_services/token-storage.service';
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,6 +12,7 @@ export class AppComponent implements OnInit {
   isLoggedIn = false;
   showAdminBoard = false;
   showModeratorBoard = false;
+  display = false;
   username: string;
 
   constructor(private tokenStorageService: TokenStorageService){}

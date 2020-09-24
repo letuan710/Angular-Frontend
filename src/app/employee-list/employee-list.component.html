@@ -1,0 +1,26 @@
+<h2> Employee List</h2>
+<p-table  [value]="employees" [paginator]="true" [rows]="10" >
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+        <th> Name</th>
+        <th> Title </th>
+        <th> Email</th>
+        <th> Actions </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-employee>
+  <!-- <tbody> -->
+    <tr  >
+        <td> {{ employee.name }} </td>
+        <td> {{ employee.title }} </td>
+        <td> {{ employee.email }} </td>
+        <td>
+            <button (click) = "updateEmployee(employee.id)" class = "btn btn-info"> Update</button>
+            <button (click) = "deleteEmployee(employee.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+            <button (click) = "employeeDetails(employee.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+        </td>
+    </tr>
+  <!-- </tbody> -->
+  </ng-template>
+  </p-table>
+

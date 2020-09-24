@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import {ButtonModule} from 'primeng/button';
 import {SidebarModule} from 'primeng/sidebar';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {TableModule} from 'primeng/table';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -21,6 +22,10 @@ import { TutorialDetailsComponent } from './tutorial-details/tutorial-details.co
 import { TutorialsListComponent } from './tutorials-list/tutorials-list.component';
 import { UploadFileComponent } from './upload-file/upload-file.component';
 import { MenuComponent } from './menu/menu.component';
+import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
+import { CreateEmployeeComponent } from './create-employee/create-employee.component';
+import { EmployeeDetailsComponent } from './employee-detail/employee-detail.component';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +41,12 @@ import { MenuComponent } from './menu/menu.component';
     TutorialDetailsComponent,
     TutorialsListComponent,
     UploadFileComponent,
-    MenuComponent
+    MenuComponent,
+    UpdateEmployeeComponent,
+    CreateEmployeeComponent,
+    EmployeeDetailsComponent,
+    EmployeeListComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -45,7 +55,8 @@ import { MenuComponent } from './menu/menu.component';
     HttpClientModule,
     ButtonModule,
     SidebarModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    TableModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

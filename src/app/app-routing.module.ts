@@ -11,6 +11,10 @@ import { TutorialsListComponent } from './tutorials-list/tutorials-list.componen
 import { TutorialDetailsComponent } from './tutorial-details/tutorial-details.component';
 import { AddTutorialComponent } from './add-tutorial/add-tutorial.component';
 import { UploadFileComponent } from './upload-file/upload-file.component';
+import {EmployeeListComponent} from './employee-list/employee-list.component';
+import {CreateEmployeeComponent} from './create-employee/create-employee.component';
+import {UpdateEmployeeComponent} from './update-employee/update-employee.component';
+import {EmployeeDetailsComponent} from './employee-detail/employee-detail.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -24,6 +28,10 @@ const routes: Routes = [
   { path: 'tutorials/:id', component: TutorialDetailsComponent },
   { path: 'add', component: AddTutorialComponent },
   { path: 'upload', component: UploadFileComponent},
+  {path: 'employees', component: EmployeeListComponent},
+  {path: 'create-employee', component: CreateEmployeeComponent},
+  {path: 'update-employee/:id', component: UpdateEmployeeComponent},
+  {path: 'employee-details/:id', component: EmployeeDetailsComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

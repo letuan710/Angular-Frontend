@@ -1,11 +1,17 @@
-<h2> Employee List</h2>
-<p-table  [value]="employees" [paginator]="true" [rows]="10" >
+<h2 > {{'Employee List'| translate}}</h2>
+<!-- <ng-container *ngFor="let language of languageList">
+  <a href="/{{language.code}}/"><button class="button">{{language.label}}</button></a>
+</ng-container> -->
+
+<p-table  [value]="employees" [lazy]="true" (onLazyLoad)="Onpage($event)"
+[paginator]="true" [rows]="size"  [totalRecords]="totalItems" >
   <ng-template pTemplate="header" let-columns>
     <tr>
-        <th> Name</th>
-        <th> Title </th>
-        <th> Email</th>
-        <th> Actions </th>
+        <th i18n = "Name of the Column | this text if for one column name"> {{'Name' | translate}}</th>
+        <th i18n = "Name of the Column | this text if for one column name"> {{'Title' | translate}} </th>
+        <th i18n = "Name of the Column | this text if for one column name"> {{'Email' | translate}}</th>
+        <th i18n = "Name of the Column | this text if for one column name"> {{'DOB' | translate}}</th>
+        <th i18n = "Name of the Column | this text if for one column name"> {{'Action' | translate}} </th>
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-employee>
@@ -14,10 +20,11 @@
         <td> {{ employee.name }} </td>
         <td> {{ employee.title }} </td>
         <td> {{ employee.email }} </td>
+        <td>{{employee.DOB}}</td>
         <td>
-            <button (click) = "updateEmployee(employee.id)" class = "btn btn-info"> Update</button>
-            <button (click) = "deleteEmployee(employee.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
-            <button (click) = "employeeDetails(employee.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            <button (click) = "updateEmployee(employee.id)" class = "btn btn-info"> {{'Update' | translate}}</button>
+            <button (click) = "deleteEmployee(employee.id)" class = "btn btn-danger" style="margin-left: 10px"> {{'Delete' | translate}}</button>
+            <button (click) = "employeeDetails(employee.id)" class = "btn btn-info" style="margin-left: 10px"> {{'View' | translate}}</button>
         </td>
     </tr>
   <!-- </tbody> -->

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="3413447a5247f507e80f13fd53334a90527b0a1d" datatype="html">
+        <source> Name</source>
+        <target>Tên</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/employee-list/employee-list.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description"> this text if for one column name</note>
+        <note priority="1" from="meaning">Name of the Column </note>
+      </trans-unit>
+      <trans-unit id="d483ed56884fc3048ebaab1ea7563962494ca1c8" datatype="html">
+        <source> Title </source>
+        <target>Chức vụ</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/employee-list/employee-list.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description"> this text if for one column name</note>
+        <note priority="1" from="meaning">Name of the Column </note>
+      </trans-unit>
+      <trans-unit id="c3ee9748326493ef1b8c4ee1403349a31df5fc8c" datatype="html">
+        <source> Email</source>
+        <target>Email</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/employee-list/employee-list.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description"> this text if for one column name</note>
+        <note priority="1" from="meaning">Name of the Column </note>
+      </trans-unit>
+      <trans-unit id="cbddc1ad8cc64386531f76594f994bee1f9360df" datatype="html">
+        <source> Actions </source>
+        <target>Hành động</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/employee-list/employee-list.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description"> this text if for one column name</note>
+        <note priority="1" from="meaning">Name of the Column </note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

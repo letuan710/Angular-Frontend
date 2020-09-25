@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from '../_services/employee.service';
 import {Employee} from '../model/employee';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-create-employee',
@@ -12,7 +13,10 @@ export class CreateEmployeeComponent implements OnInit {
 
   employee: Employee = new Employee();
   constructor(private employeeService: EmployeeService,
-    private router: Router) { }
+    private router: Router) {
+
+     }
+
 
   ngOnInit(): void {
   }

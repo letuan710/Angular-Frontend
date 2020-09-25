@@ -3,4 +3,5 @@ export class Employee{
   name: String;
   email: String;
   title: String;
+  DOB: Date;
 }

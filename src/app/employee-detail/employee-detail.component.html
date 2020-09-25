@@ -3,13 +3,16 @@
 <hr/>
 <div *ngIf="employee">
   <div>
-    <label><b>Name: </b></label>{{employee.name}}
+    <label><b>{{'Name' | translate}}: </b></label>{{employee.name}}
   </div>
   <div>
-    <label><b>Title: </b></label>{{employee.title}}
+    <label><b>{{'Title' | translate}}: </b></label>{{employee.title}}
   </div>
   <div>
-    <label><b>Email: </b></label>{{employee.email}}
+    <label><b>{{'Email' | translate}}: </b></label>{{employee.email}}
+  </div>
+  <div>
+    <label><b>{{'DOB' | translate}}: </b></label>{{employee.DOB}}
   </div>
 </div>
 

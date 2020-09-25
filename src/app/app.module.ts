@@ -26,6 +26,9 @@ import { UpdateEmployeeComponent } from './update-employee/update-employee.compo
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
 import { EmployeeDetailsComponent } from './employee-detail/employee-detail.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -56,10 +59,20 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
     ButtonModule,
     SidebarModule,
     BrowserAnimationsModule,
-    TableModule
-  ],
+    TableModule,
+    TranslateModule.forRoot({
+    loader: {
+      provide: TranslateLoader,
+      useFactory: httpTranslateLoader,
+      deps: [HttpClient]
+    }
+  })
+],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 
 })
 export class AppModule { }
+  export function httpTranslateLoader(http: HttpClient) {
+    return new TranslateHttpLoader(http);
+}
